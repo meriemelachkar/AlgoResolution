@@ -11,13 +11,13 @@ function processFormule(F) {
         });
 
         // Supprimer les littéraux et leur négation
-        ensembleClausesF = supprimerLettreEtNegation(ensembleClausesF);
+        ensembleClausesF = supprimerLitteraux(ensembleClausesF);
                   
         // Vérifier si l'ensemble de clauses est vide
         if (ensembleClausesF.length === 0) {
             console.log("F est valide");
         } else {
-            console.log("F est invalide. Clauses restantes : ", ensembleClausesF.join(', '));
+            console.log("F est invalide. Clauses restantes : ",ensembleClausesF.map(clause => clause.join('v')).join(', '));
         }
 
     } else {
@@ -26,7 +26,7 @@ function processFormule(F) {
 }
 
 // Fonction pour supprimer les littéraux et leur négation de l'ensemble de clauses
-function supprimerLettreEtNegation(liste) {
+function supprimerLitteraux(liste) {
     let index = 0;
     while (index < liste.length) {
         let clause = liste[index];
@@ -70,17 +70,12 @@ function supprimerLettreEtNegation(liste) {
     return liste;
 }
 
-
-
-
-
-
+// Fonction de validation de la formule
 function formuleEstValide(formule) {
     // Expression régulière pour la validation
     const regex = /^[PQRSTv()!,]*$/;
     return regex.test(formule);
 }
-
 
 // Exemple d'utilisation
 let F = "Q,!Q";
