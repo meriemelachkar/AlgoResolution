@@ -13,6 +13,7 @@ To use the code, you need to provide a logical formula (`F`) as a string. The lo
   - `(` and `)` for grouping.
 
 <h1>Functions</h1>
+
 1. **`processFormule(F)`**:
    - This is the main function that processes the logical formula.
    - It checks the validity of the formula, splits it into clauses, removes literals and their negations, and finally, determines if the resulting set of clauses is empty or not.
