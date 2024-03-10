@@ -1,5 +1,5 @@
 <h1>Readme - Validateur de Formules Logiques</h1>
-Ce programme JavaScript implémente un validateur de formules logiques. Il prend en entrée une formule logique, vérifie sa validité syntaxique et effectue des opérations pour détecter la présence de clauses valides.
+Ce programme JavaScript implémente un validateur de formules logiques. Il prend en entrée une formule logique, vérifie sa validité et effectue des opérations pour détecter la présence de clauses valides.
 
 <h1>Fonctionnalités</h1>
 Validation de Formules Logiques : La fonction formuleEstValide vérifie si une formule logique donnée est syntaxiquement valide en utilisant une expression régulière.
